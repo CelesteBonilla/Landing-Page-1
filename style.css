@@ -1,0 +1,128 @@
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    body {
+      color: #ffffff;
+      background: #081c24;
+    }
+    header {
+      background: #05445E;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .hero {
+      background: url('https://www.ofertasparaviajar.com/wp-content/uploads/2016/08/top100-gifts-animados-viaje-10.gif') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #ffffff;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para mejorar la legibilidad */
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: #ffffff;
+      background: #189AB4;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #05445E;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h3 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .feature {
+      background: #0D3B66;
+      padding: 30px;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      color: #ffffff;
+      text-align: center;
+    }
+    .feature:hover {
+      transform: scale(1.05);
+    }
+    .feature img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    #cta {
+      background: #189AB4;
+      color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .footer {
+      background: #05445E;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-content h2 {
+        font-size: 2.5rem;
+      }
+    }
+  
